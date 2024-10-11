@@ -6,7 +6,7 @@ const cvv = document.getElementById('cvv');
 
 const visa = document.querySelector('.card');
 
-/*  SHOW ERROR  */
+
 function showError(element, error) {
     if(error === true) {
         element.style.opacity = '1';
@@ -136,7 +136,7 @@ form.addEventListener('submit', function (e) {
         e.preventDefault();
     };
 
-    // 5. if any input is empty show the alert of that input
+
     let input = document.querySelectorAll('input');
     for( i = 0; i < input.length; i++) {
         if(input[i].value === '') {
