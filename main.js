@@ -15,7 +15,7 @@ function showError(element, error) {
     }
 };
 
-/*  CHANGE THE FORMAT NAME  */
+
 name.addEventListener('input', function() {
     let alert1 = document.getElementById('alert-1');
     let error = this.value === '';
@@ -23,11 +23,11 @@ name.addEventListener('input', function() {
     document.getElementById('card-name').textContent = this.value;
 });
 
-/*  CHANGE THE FORMAT CARD NUMBER*/
+
 number.addEventListener('input', function(e) {
     this.value = numberAutoFormat();
 
-    //show error when is different of 16 numbers and 3 white space
+   
     let error = this.value.length !== 19;
     let alert2 = document.getElementById('alert-2');
     showError(alert2, error);
@@ -59,7 +59,7 @@ function numberAutoFormat() {
     }
 };
 
-/*  CHANGE THE FORMAT DATE  */
+
 date.addEventListener('input', function(e) {
     this.value = dateAutoFormat();
     
@@ -111,21 +111,21 @@ function dateAutoFormat() {
     }
 };
 
-/*  CHANGE THE FORMAT CVV  */
+
 cvv.addEventListener('input', function(e) {
     let alert4 = document.getElementById('alert-4');
     let error = this.value.length < 3;
     showError(alert4, error)
 });
 
-/* CHECK IF KEY PRESSED IS A NUMBER (input of card number, date and cvv) */
+
 function isNumeric(event) {
     if ((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode > 31)) {
         return false;
     }
 };
 
-/*  VALIDATION FORM WHEN PRESS THE BUTTON   */
+
 form.addEventListener('submit', function (e) {
     // 1. if there is not any name
     // 2. if the length of the number card is not valid (16 numbers and 3 white space)
